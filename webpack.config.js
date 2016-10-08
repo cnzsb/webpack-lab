@@ -20,6 +20,14 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.js$/,
+                loader: 'babel',
+                include: APP_PATH,
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass'],
                 include: APP_PATH
