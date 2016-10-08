@@ -23,6 +23,10 @@ module.exports = {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass'],
                 include: APP_PATH
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url?limit=10000'
             }
         ]
     },
