@@ -11,6 +11,12 @@ module.exports = {
         path: BUILD_PATH,
         filename: 'bundle.js'
     },
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true
+    },
     plugins: [
         new HtmlwebpackPlugin({
             title: 'Hello World app'
