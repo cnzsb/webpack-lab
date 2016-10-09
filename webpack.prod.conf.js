@@ -40,7 +40,13 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin({minimize: true}),
         new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
         new HtmlwebpackPlugin({
-            title: 'Hello World app'
+            title: 'Hello World app',
+            template: path.resolve(ROOT_PATH, 'index.html'),
+            filename: 'index.html',
+            // 设置引用entry中的入口
+            chunks: ['app', 'vendors'],
+            // 把script插入到标签中
+            inject: 'body'
         })
     ]
 }

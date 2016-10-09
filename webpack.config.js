@@ -41,7 +41,8 @@ module.exports = {
     },
     plugins: [
         new HtmlwebpackPlugin({
-            title: 'Hello World app'
+            title: 'Hello World app',
+            template: path.resolve(ROOT_PATH, 'index.html')
         })
     ]
 }
