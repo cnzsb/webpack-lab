@@ -13,7 +13,7 @@ module.exports = {
     },
     output: {
         path: BUILD_PATH,
-        filename: '[name].js'
+        filename: '[name].[hash].js'
     },
     module: {
         loaders: [
