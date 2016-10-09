@@ -11,6 +11,7 @@ module.exports = {
         path: BUILD_PATH,
         filename: 'bundle.js'
     },
+    devtool: 'eval-source-map',
     devServer: {
         historyApiFallback: true,
         hot: true,
@@ -29,7 +30,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass'],
+                loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
                 include: APP_PATH
             },
             {
